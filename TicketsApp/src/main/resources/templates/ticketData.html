@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1 style="font-size: xx-large">Dobrodošli <span th:text="${name}">User</span></h1>
+</header>
+
+<main>
+    <section>
+        <h2>Detalji o ulaznici</h2>
+        <table>
+            <tr style="text-align: left; font-size: x-large">
+                <th>Vatin: </th>
+                <td th:text="${ticket.vatin}"></td>
+            </tr>
+            <tr style="text-align: left; font-size: x-large">
+                <th>Ime: </th>
+                <td th:text="${ticket.firstName}"></td>
+            </tr>
+            <tr style="text-align: left; font-size: x-large">
+                <th>Prezime: </th>
+                <td th:text="${ticket.lastName}"></td>
+            </tr>
+            <tr style="text-align: left; font-size: x-large">
+                <th>Datum nastanka:</th>
+                <td th:text="${formattedCreatedAt}"></td>
+            </tr>
+
+        </table>
+    </section>
+</main>
+
+</body>
+</html>
