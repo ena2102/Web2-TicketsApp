@@ -41,7 +41,7 @@ public class TicketController {
 
             Ticket ticket = ticketService.createTicket(ticketDTO);
 
-            String qrContent = "http://localhost:8080/ticket/" + ticket.getUuid();
+            String qrContent = "https://web2-ticketsapp-1.onrender.com/ticket/" + ticket.getUuid();
 
             QRCodeWriter barcodeWriter = new QRCodeWriter();
             BitMatrix bitMatrix = barcodeWriter.encode(qrContent, BarcodeFormat.QR_CODE, 200, 200);
